@@ -2,6 +2,8 @@ let choiceOptions = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 let computerScore = 0;
 let roundCounter = 0;
+let playerSelection;
+let computerSelection;
 
 function getComputerChoice() {
     return choiceOptions[Math.floor(Math.random() * choiceOptions.length)];
@@ -14,6 +16,7 @@ function playRound() {
         if (isNaN(playerSelection)) {
             console.log('You must choose a number corresponding to your choice...');
             playerSelection = parseInt(prompt('Type in the number of your choice: (1) Rock, (2) Paper, or (3) Scissors'));
+
         } else if (playerSelection === 1) {
             playerSelection = 'Rock';
             break;
@@ -32,17 +35,17 @@ function playRound() {
     const computerSelection = getComputerChoice();
 
     if (playerSelection === computerSelection) {
-        return `IT'S A TIE! ${playerSelection} ties with ${computerSelection}`;
+        console.log(`IT'S A TIE! ${playerSelection} ties with ${computerSelection}`);
     } else if (
         (playerSelection === 'Rock' && computerSelection === 'Scissors') ||
         (playerSelection === 'Paper' && computerSelection === 'Rock') ||
         (playerSelection === 'Scissors' && computerSelection === 'Paper')
     ) {
         playerScore++;
-        return `YOU WON! ${playerSelection} beats ${computerSelection}`;
+        console.log(`YOU WON! ${playerSelection} beats ${computerSelection}`);
     } else {
         computerScore++;
-        return `YOU LOST! ${computerSelection} beats ${playerSelection}`;
+        console.log(`YOU LOST! ${computerSelection} beats ${playerSelection}`);
     }
 }
 
