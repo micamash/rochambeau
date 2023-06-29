@@ -25,7 +25,6 @@ This is a solution to the [Rock Paper Scissors Project on The Odin Project](http
 
 ![Rochambeau](img/rochambeau-screenshot.png)
 
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/micamash/rochambeau)
