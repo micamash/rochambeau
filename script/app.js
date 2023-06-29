@@ -82,7 +82,7 @@ function resetGame() {
 const buttons = document.querySelectorAll('input');
 buttons.forEach(button => {
     button.addEventListener('click', function () {
-        playRound(button.value);
+        playRound(button.id);
         if (roundCounter === 5) {
             endGame();
         }

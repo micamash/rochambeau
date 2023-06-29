@@ -6,14 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <title>Rochambeau</title>
 </head>
 
 <body>
     <main>
-        <input type="button" value="rock"></input>
-        <input type="button" value="paper"></input>
-        <input type="button" value="scissors"></input>
+        <h1>ROCHAMBEAU!</h1>
+        <div class="selections">
+            <div class="btnAndTitle">
+                <input type="button" id="rock"></input>
+                <p>Rock</p>
+            </div>
+
+            <div class="btnAndTitle">
+                <input type="button" id="paper"></input>
+                <p>Paper</p>
+            </div>
+
+            <div class="btnAndTitle">
+                <input type="button" id="scissors"></input>
+                <p>Scissors</p>
+            </div>
+        </div>
 
         <div id='result'></div>
         <div id='score'></div>

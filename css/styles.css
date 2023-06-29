@@ -1,0 +1,55 @@
+html {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #3f5ac5;
+}
+
+main {
+    background-color: #43895a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.selections {
+    display: flex;
+}
+
+.selections>.btnAndTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selections>.btnAndTitle>input {
+    margin: 20px;
+    padding: 50px;
+    border-style: none;
+    border-radius: 100px;
+}
+
+#rock {
+    background: url('../img/rock.png') no-repeat;
+    background-size: contain;
+}
+
+#paper {
+    background: url('../img/paper.png') no-repeat;
+    background-size: contain;
+}
+
+#scissors {
+    background: url('../img/scissors.png') no-repeat;
+    background-size: contain;
+}
