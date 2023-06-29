@@ -16,10 +16,12 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 60vw;
+    height: 70vh;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 h1 {
@@ -79,10 +81,18 @@ p {
     padding: 10px;
     border-style: none;
     border-radius: 100px;
-    /* background-color: #f8e4c5; */
     background: radial-gradient(circle at center, #f3da98, #c7b37c, #b6a371 100%);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px;
     cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, -50%);
 }
+
+
+
+/*Media Queries*/
+
+@media (max-width: 600px) {}

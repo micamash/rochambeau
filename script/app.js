@@ -1,11 +1,15 @@
 let playerScore = 0;
 let computerScore = 0;
-let roundCounter = 0;
+let roundCounter = 1;
 
 function getComputerChoice() {
     let choiceOptions = ["rock", "paper", "scissors"];
     return choiceOptions[Math.floor(Math.random() * choiceOptions.length)];
 }
+
+document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
+document.querySelector('#result').innerHTML = 'MAKE YOUR SELECTION';
+document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
 function playRound(playerSelection) {
     const computerSelection = getComputerChoice();
@@ -25,11 +29,13 @@ function playRound(playerSelection) {
         result = `YOU LOST! ${computerSelection} beats ${playerSelection}. Select again...`;
     }
 
+    roundCounter++;
+
+    document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
     document.querySelector('#result').innerHTML = result;
     document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
-    roundCounter++;
-    if (roundCounter === 5) {
+    if (playerScore === 3 || computerScore === 3 || roundCounter === 5) {
         endGame();
     }
 
@@ -66,7 +72,7 @@ function endGame() {
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    roundCounter = 0;
+    roundCounter = 1;
 
     document.querySelector('#result').innerHTML = '';
 
@@ -75,7 +81,9 @@ function resetGame() {
         button.disabled = false;
     });
 
-    document.querySelector('#score').innerHTML = 'You: 0 Computer: 0';
+    document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
+    document.querySelector('#result').innerHTML = 'MAKE YOUR SELECTION';
+    document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
     const playAgainDiv = document.querySelector('#playAgain');
     playAgainDiv.style.display = 'none';
@@ -85,8 +93,5 @@ const buttons = document.querySelectorAll('input');
 buttons.forEach(button => {
     button.addEventListener('click', function () {
         playRound(button.id);
-        if (roundCounter === 5) {
-            endGame();
-        }
     });
 });
