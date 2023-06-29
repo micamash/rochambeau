@@ -8,6 +8,7 @@ html {
 body {
     font-family: 'Gloria Hallelujah', cursive;
     background-color: #3f5ac5;
+    text-align: center;
 }
 
 main {
@@ -95,4 +96,62 @@ p {
 
 /*Media Queries*/
 
-@media (max-width: 600px) {}
+@media (max-width: 600px) {
+
+    body {
+        font-size: .88em;
+        text-align: center;
+    }
+
+    main {
+
+        width: 80vw;
+        height: 90vh;
+        padding: 10px 10px 20px 10px;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 0 0 10px 0;
+    }
+
+    main>p:first-of-type {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    .selections {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .selections>.btnAndTitle>input {
+        margin: 10px;
+        padding: 30px;
+    }
+
+    #rock {
+        margin: 0;
+        width: 64px;
+    }
+
+    #paper {
+        margin: 0;
+    }
+
+    #scissors {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    #playAgain>button {
+        font-size: 11px;
+        margin-bottom: 5px;
+        transform: translate(-50%, -10%);
+    }
+}
