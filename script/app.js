@@ -12,17 +12,17 @@ function playRound(playerSelection) {
     let result = "";
 
     if (playerSelection === computerSelection) {
-        result = `IT'S A TIE! You both chose ${playerSelection}!`;
+        result = `IT'S A TIE! You both chose ${playerSelection}! No one gets points. Select again...`;
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')
     ) {
         playerScore++;
-        result = `YOU WON! ${playerSelection} beats ${computerSelection}`;
+        result = `YOU WON! ${playerSelection} beats ${computerSelection}. Select again...`;
     } else {
         computerScore++;
-        result = `YOU LOST! ${computerSelection} beats ${playerSelection}`;
+        result = `YOU LOST! ${computerSelection} beats ${playerSelection}. Select again...`;
     }
 
     document.querySelector('#result').innerHTML = result;
@@ -44,12 +44,14 @@ function endGame() {
 
     let gameResult = "";
     if (playerScore > computerScore) {
-        gameResult = `Your score: ${playerScore}. Computer's score: ${computerScore}. YOU WON THE GAME!`;
+        gameResult = `YOU WON THE GAME!`;
     } else if (computerScore > playerScore) {
-        gameResult = `Your score: ${playerScore}. Computer's score: ${computerScore}. YOU LOST. THE COMPUTER WON THE GAME!`;
+        gameResult = `YOU LOST. THE COMPUTER WON THE GAME!`;
     } else {
-        gameResult = `Your score: ${playerScore}. Computer's score: ${computerScore}. YOU TIED THE GAME!`;
+        gameResult = `YOU TIED THE GAME!`;
     }
+
+    document.querySelector('#result').innerHTML = gameResult;
 
     const playAgainButton = document.createElement('button');
     playAgainButton.textContent = 'Play Again';
