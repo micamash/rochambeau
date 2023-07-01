@@ -29,15 +29,15 @@ function playRound(playerSelection) {
         result = `YOU LOST! ${computerSelection} beats ${playerSelection}. Select again...`;
     }
 
-    roundCounter++;
-
     document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
     document.querySelector('#result').innerHTML = result;
     document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
-    if (playerScore === 3 || computerScore === 3 || roundCounter === 6) {
+    if (playerScore === 3 || computerScore === 3 || roundCounter === 5) {
         endGame();
     }
+
+    roundCounter++;
 
     return;
 }
