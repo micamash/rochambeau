@@ -35,7 +35,7 @@ function playRound(playerSelection) {
     document.querySelector('#result').innerHTML = result;
     document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
-    if (playerScore === 3 || computerScore === 3 || roundCounter === 5) {
+    if (playerScore === 3 || computerScore === 3 || roundCounter === 6) {
         endGame();
     }
 
