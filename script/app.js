@@ -1,19 +1,21 @@
 let playerScore = 0;
 let computerScore = 0;
-let roundCounter = 1;
+let roundDisplay = 1;
+let roundCounter = 0;
 
 function getComputerChoice() {
     let choiceOptions = ["rock", "paper", "scissors"];
     return choiceOptions[Math.floor(Math.random() * choiceOptions.length)];
 }
 
-document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
+document.querySelector('#round').innerHTML = `Current round: ${roundDisplay}`;
 document.querySelector('#result').innerHTML = 'MAKE YOUR SELECTION';
-document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
 function playRound(playerSelection) {
     const computerSelection = getComputerChoice();
     let result = "";
+    roundCounter++;
+    roundDisplay++;
 
     if (playerSelection === computerSelection) {
         result = `IT'S A TIE! You both chose ${playerSelection}! No one gets points. Select again...`;
@@ -29,15 +31,13 @@ function playRound(playerSelection) {
         result = `YOU LOST! ${computerSelection} beats ${playerSelection}. Select again...`;
     }
 
-    document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
+    document.querySelector('#round').innerHTML = `Current round: ${roundDisplay}`;
     document.querySelector('#result').innerHTML = result;
     document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
     if (playerScore === 3 || computerScore === 3 || roundCounter === 5) {
         endGame();
     }
-
-    roundCounter++;
 
     return;
 }
@@ -57,6 +57,7 @@ function endGame() {
         gameResult = `YOU TIED THE GAME!`;
     }
 
+    document.querySelector('#round').innerHTML = ``;
     document.querySelector('#result').innerHTML = gameResult;
 
     const playAgainButton = document.createElement('button');
@@ -72,7 +73,8 @@ function endGame() {
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    roundCounter = 1;
+    roundCounter = 0;
+    roundDisplay = 1;
 
     document.querySelector('#result').innerHTML = '';
 
@@ -81,7 +83,7 @@ function resetGame() {
         button.disabled = false;
     });
 
-    document.querySelector('#round').innerHTML = `Current round: ${roundCounter}`;
+    document.querySelector('#round').innerHTML = `Current round: ${roundDisplay}`;
     document.querySelector('#result').innerHTML = 'MAKE YOUR SELECTION';
     document.querySelector('#score').innerHTML = `You: ${playerScore} Computer: ${computerScore}`;
 
