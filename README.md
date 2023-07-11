@@ -27,8 +27,8 @@ This is a solution to the [Rock Paper Scissors Project on The Odin Project](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/micamash/rochambeau)
-- Live Site URL: [Add live site URL here](https://micamash.github.io/rochambeau/)
+- Solution URL: [GitHub](https://github.com/micamash/rochambeau)
+- Live Site URL: [Play the game here!](https://micamash.github.io/rochambeau/)
 
 ## My process
 
