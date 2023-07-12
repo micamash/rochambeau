@@ -37,7 +37,7 @@ First, I created the logic for the game itself and made sure it was correct and 
 
 -HTML
 -CSS
-- JavaScript
+-JavaScript
 
 ### What I learned
 
