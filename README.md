@@ -18,8 +18,7 @@ This is a solution to the [Rock Paper Scissors Project on The Odin Project](http
 
 ### The challenge from The Odin Project
 
-"We’re going to make a simple implementation of grade-school classic “rock paper scissors”. For the moment we’re just going to play the game from the browser console, but we will revisit this project in a later lesson and add a Graphical User Interface with buttons and text."
-  -The Odin Project     
+This challenge was from The Odin Project. The first challenge was to build the logic for the game with JavaScript that was playable through the browser console. The second challenge integrated what I learned about HTML, CSS, and JavaScript query selectors to create a GUI.
 
 ### Screenshots
 
@@ -32,7 +31,7 @@ This is a solution to the [Rock Paper Scissors Project on The Odin Project](http
 
 ## My process
 
-First, I created the logic for the game itself. After I verified the logic in the console, I created the HTML and styled the page with CSS. After I completed that I returned to my Javascript and added some functions and selectors to complete the project.
+First, I created the logic for the game itself and made sure it was correct and playable through the console. After I verified it was working correctly, I created the HTML and styled the page with CSS. After I completed that I returned to my JavaScript and added some functions and selectors to complete the project.
 
 ### Built with
 
